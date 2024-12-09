@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comidas Salgadas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="Login.html">
+        <button class="logincadastro">Login / Cadastro</button>
+        </a>
+        <div class="header-design">
+        <h1>Quero café.</h1>
+        <img class="logo" src="/icon/logo 2.png" alt="logo"/>
+        </div>
+    </header>
+    <a href="carrinho.html">
+    <button class="carrinho"><img src="/icon/carrinho.png" alt="carrinho"/></button>
+    </a>
+    <nav class="botão">
+            <a href="index.html">
+            <button>Bebidas Quentes</button>
+            </a>
+            <a href="bf.html">
+            <button>Bebidas Frias</button>
+            </a>
+            <a href="doce.html">
+            <button>Comidas Doces</button>
+            </a>
+            <a href="salgado.html">
+            <button>Comidas Salgadas</button>
+            </a>
+            <a href="solicitap.html">
+              <button>Reabastercer os Produtos</button>
+            </a>
+          </nav>
+<main>   
+ <div class="imagens">
+    <div class="item">
+      <img src="/salgados/coxinha.jpg" alt="coxinha"/>
+       <div class="texto">
+        <h2>Coxinha.</h2>
+        <p>Nossa Coxinha é crocante por fora e irresistivelmente macia por dentro, recheada com frango desfiado temperado e 
+            <br>envolta em uma massa dourada e saborosa. Uma verdadeira paixão brasileira em cada mordida!</p>
+       </div>
+        <div class="botão_comprar">
+        <button onclick="adicionarAoCarrinho('Coxinha', 37.90, '/salgados/coxinha.jpg')">COMPRAR</button>
+        <p>R$37.90</p>
+        </div>
+    </div>
+    
+    <div class="item">
+        <img src="/salgados/empada.jpg" alt="empada"/>
+        <div class="texto">
+        <h2>Empada.</h2>
+        <p>Experimente nossa Empada, com uma massa leve e crocante, recheada com carne suculenta, 
+          frango desfiado ou <br>uma mistura de vegetais frescos. Um lanche delicioso que vai aquecer seu coração a cada mordida!</p>
+        </div>
+         <div class="botão_comprar">
+            <button onclick="adicionarAoCarrinho('Empada', 23.99, '/salgados/empada.jpg')">COMPRAR</button>
+            <p>R$23.99</p>
+         </div>
+    </div>
+
+    <div class="item">
+     <img src="/salgados/pão-de-queijo.jpg" alt="pao de queijo"/>
+     <div class="texto">
+     <h2>Pão de Queijo.</h2>
+     <p>
+        Nossos Pães de Queijo são irresistíveis, feitos com polvilho, queijo minas e um toque especial de amor. 
+        <br>Crocantes por fora e macios por dentro, são o lanche perfeito para acompanhar seu café!</p>
+     </div>
+      <div class="botão_comprar">
+        <button onclick="adicionarAoCarrinho('Pão de Queijo', 28.54, '/salgados/pão-de-queijo.jpg')">COMPRAR</button>
+        <p>R$28.54</p>
+      </div>
+    </div>
+
+    <div class="item">
+     <img src="/salgados/sanduiche.jpg" alt="sanduiche"/>
+     <div class="texto">
+     <h2>Sanduíche.</h2>
+     <p>Experimente nosso Sanduíche Natural, recheado com ingredientes frescos como peito de frango grelhado, <br>alface crocante, 
+        tomate suculento e um toque de maionese leve. Uma opção saudável e deliciosa para energizar seu dia!</p>
+        </div>
+        <div class="botão_comprar">
+            <button onclick="adicionarAoCarrinho('Sanduíche', 32.16, '/salgados/sanduiche.jpg')">COMPRAR</button>
+            <p>R$32.16</p>
+        </div>
+    </div>   
+</div>
+</main>
+<footer>
+    <h1>Redes Sociais</h1>
+    <div class="redes_socias">
+    <img src="/icon/face.png" alt=""/>
+      <img src="/icon/insta.png" alt=""/>
+    </div>
+    <h3>Rua das Estrelas, 128 Bairro Jardim dos Sabores Cidade Bela Vista, SP</h3>
+    <p>© 2024 Quero Café. Todos os direitos reservados.</p>
+</footer>
+
+<div id="notificacao" class="notificacao"></div>
+<script src="scripts.js"></script>
+
+</body>
+</html>

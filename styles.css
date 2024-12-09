@@ -1,0 +1,309 @@
+body{
+    background-color: #F5E1C0; /*fundo */
+    
+}
+
+.header-design{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #2C1B18;
+    padding: 20px;
+}
+.logincadastro{
+    display: flex;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Pacifico';
+    color: #4B2E2A;
+    font-size: 20px;
+}
+
+.logo{
+    width: 90px;
+    height: 90px;
+    margin-right: -56px; /* Espaço entre a logo e o título*/
+}
+
+h1{
+    color: #FFD700;
+    font-family: 'Pacifico';
+    position: relative;
+    z-index: 1;
+}
+
+/* Imagem do fundo para a logo e h1*/
+.header-design::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/exem/salao-cafe.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.botão{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px; 
+    margin-top: -20px;
+    gap: 10px;  /* Espaçamento entre botões*/
+}
+
+.botão button{
+    display: flex;
+    gap: 10px;
+    border: black;
+    background: #4B2E2A;
+    font-family: 'Pacifico';
+    color: #FFD700;
+    font-size: 25px;
+    cursor: pointer; /* transforma o cursor em uma mãozinha*/
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.botão button:hover{
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+.carrinho {
+    display: flex;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 1px;
+}
+
+.carrinho img {
+    width: 30px;
+    height: auto;
+}
+
+.imagens {
+    display: flex;
+    flex-wrap: wrap; /*Faz que os itens se movam para a próxima linha*/
+    gap: 20px; 
+}
+
+.item {
+    display: flex; /* Alinha os elementos (imagem e texto) lado a lado */
+    align-items: flex-start; /* Garante que os elementos sejam alinhados ao topo */
+    gap: 15px; 
+}
+
+.item img {
+    width: 150px; 
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.texto {
+    display: flex;
+    flex-direction: column; /* faz que o <h2> fique acima do <p>*/
+}
+
+h2 {
+    margin: 0; /* Margem inferior para espaçamento entre h2 e p */
+    text-decoration: underline;
+    font-family: 'Pacifico';
+    font-size: 24px; 
+    color: #4B2E2A; 
+}
+
+p {
+    margin: 0; /* Remove a margem padrão */
+    font-size: 16px; 
+    font-family: 'Pacifico';
+    color: #4B2E2A; 
+}
+
+.botão_comprar button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    gap: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #4B2E2A;
+    font-family: 'Pacifico';
+    color: #FFD700;
+}
+
+
+footer{
+    background-color: #4b2e2a;
+    position: relative; /* Necessário para o posicionamento absoluto do parágrafo */
+}
+
+
+.redes_socias{
+   display: flex;
+   justify-content: left;
+   margin: 20px;
+   margin-top: 1px;
+   gap: 1px;
+}
+
+.redes_socias img{
+    width: 50px;
+    height: auto;
+    object-fit: contain; /* Mantém a proproção da imagem sem cortar */
+    margin-bottom: 5px;
+}
+
+footer .redes_socias img[src="/icon/face.png"]{
+    width: 40px;
+    height: auto;
+}
+
+footer h1{
+    margin: 20px;
+}
+
+footer h3{
+    margin: 20px;
+    color: #FFD700;
+}
+
+footer p{
+    position: absolute;       /* Torna o parágrafo posicionado de forma absoluta */
+    top: 0;                   
+    right: 0;                
+    color: #FFD700;           
+    margin: 10px;             /* Adiciona uma margem para ajustar o espaçamento */
+    color: #FFD700;
+}
+
+@media screen and (max-width: 768px) {
+    .header-design{
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    .logincadastro{
+        font-size: 1rem;
+        margin-right: 0;
+        margin-top: 0.5rem;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+    
+    .botão{
+        display: flex;
+        flex-direction: column; /*Empilha os botões verticalmente*/
+        margin: 0.500rem;
+        font-size: 0.5rem 0;
+        width: 100%;
+        padding: 0.6rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .botão button{
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.75rem; /* Ajuste de espaçamento interno */
+    }
+
+    .item img{
+        width: 5.25rem;
+        height: auto;
+        margin-top: auto;
+        flex-direction: column;
+    }
+
+    .item{
+        width: 5.25;
+    }
+
+    .texto h2{
+        font-size: 1.25rem;
+    }
+
+    .texto p{
+        font-size: 0.875rem;
+        
+    }
+
+    footer p {
+        font-size: 0.650rem;
+    }
+
+    footer h1{
+        font-size: 1.2rem;
+    }
+
+    .redes_socias img{
+        width: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-design{
+        padding: 0.3125rem;
+    }
+
+    .logo{
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+
+    .logincadastro{
+        font-size: 0.875rem;
+    }
+
+    h1{
+        font-size: 1.25rem;
+    }
+
+    .item img{
+        width: 5rem;
+    }
+
+    .botão button{
+        font-size: 1rem;
+        padding: 0.625rem;
+    }
+
+    .redes_socias img{
+        width: 1.875rem;
+    }
+}
+
+.notificacao{
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background-color: #4B2E2A;
+    color:#FFD700;
+    font-family: 'Arial';
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(6.25rem);
+    z-index: 1000;
+}
+
+.notificacao.mostrar{
+    opacity: 1;
+    transform: translateX(0);
+}

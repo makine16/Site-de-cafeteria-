@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebidas Frias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="Login.html">
+        <button class="logincadastro">Login / Cadastro</button>
+        </a>
+        <div class="header-design">
+        <h1>Quero café.</h1>
+        <img class="logo" src="/icon/logo 2.png" alt="logo"/>
+        </div>
+    </header>
+    <a href="carrinho.html">
+    <button class="carrinho"><img src="/icon/carrinho.png" alt="carrinho"/></button>
+    </a>
+    <nav class="botão">
+            <a href="index.html">
+            <button>Bebidas Quentes</button>
+            </a>
+            <a href="bf.html">
+            <button>Bebidas Frias</button>
+            </a>
+            <a href="doce.html">
+            <button>Comidas Doces</button>
+            </a>
+            <a href="salgado.html">
+            <button>Comidas Salgadas</button>
+            </a>
+        </nav>
+<main>   
+ <div class="imagens">
+    <div class="item">
+      <img src="/bebidas frias/frappuccino.jpg" alt="Frappuccino"/>
+       <div class="texto">
+        <h2>Frappuccino.</h2>
+        <p>Refresque-se com nosso irresistível Frappuccino, uma deliciosa mistura de café gelado, leite cremoso e gelo batido, 
+            <br>finalizado com chantilly e uma pitada de calda de chocolate.Perfeito para qualquer momento do dia!</p>
+       </div>
+        <div class="botão_comprar">
+        <button onclick="adicionarAoCarrinho('Frappuccino', 37.90, '/bebidas frias/frappuccino.jpg')">COMPRAR</button>
+        <p>R$37.90</p>
+        </div>
+    </div>
+    
+    <div class="item">
+        <img src="/bebidas frias/café gelado.jpg" alt="cafe gelado"/>
+        <div class="texto">
+        <h2>Café Gelado.</h2>
+        <p>Experimente nosso Café Gelado, uma refrescante combinação de café expresso suave, 
+            gelo e um toque de leite cremoso.<br>Ideal para quem busca energia e frescor em cada gole!</p>
+        </div>
+         <div class="botão_comprar">
+            <button onclick="adicionarAoCarrinho('Café Gelado', 23.99, '/bebidas frias/café gelado.jpg')">COMPRAR</button>
+            <p>R$23.99</p>
+         </div>
+    </div>
+
+    <div class="item">
+     <img src="/bebidas frias/chás gelados.jpg" alt="chás gelados"/>
+     <div class="texto">
+     <h2>Chás gelados.</h2>
+     <p>Revigore-se com nosso Chá Gelado, feito com chás selecionados e servido com gelo, limão fresco e um toque suave de doçura. 
+        <br>Perfeito para refrescar seus dias com sabor e leveza!</p>
+     </div>
+      <div class="botão_comprar">
+        <button onclick="adicionarAoCarrinho('Chá Gelado', 28.54, '/bebidas frias/chás gelados.jpg')">COMPRAR</button>
+        <p>R$28.54</p>
+      </div>
+    </div>
+
+    <div class="item">
+     <img src="/bebidas frias/refrigerante.jpg" alt="refrigerante"/>
+     <div class="texto">
+     <h2>refrigerante.</h2>
+     <p>Sinta o frescor de um Refrigerante gelado, borbulhante e cheio de sabor. 
+        Perfeito para acompanhar suas refeições <br> e trazer uma explosão de refrescância a qualquer momento!</p>
+        </div>
+        <div class="botão_comprar">
+            <button onclick="adicionarAoCarrinho('Refrigerante', 5.16, '/bebidas frias/café gelado.jpg')">COMPRAR</button>
+            <p>R$5.16</p>
+        </div>
+    </div>   
+</div>
+</main>
+<footer>
+    <h1>Redes Sociais</h1>
+    <div class="redes_socias">
+    <img src="/icon/face.png" alt=""/>
+      <img src="/icon/insta.png" alt=""/>
+    </div>
+    <h3>Rua das Estrelas, 128 Bairro Jardim dos Sabores Cidade Bela Vista, SP</h3>
+    <p>© 2024 Quero Café. Todos os direitos reservados.</p>
+</footer>
+
+<div id="notificacao" class="notificacao"></div>
+<script src="scripts.js"></script>
+
+</body>
+</html>

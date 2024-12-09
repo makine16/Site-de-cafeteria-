@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+    <style>
+        .import{
+            font-family: "Arial";
+            font-weight: 500;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(80deg, hsla(46, 89%, 22%, 0.493), rgb(104, 35, 35));
+        }
+        form{
+            background-color: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 60px;
+            border-radius: 12px;
+            color: whitesmoke;
+            display: none;
+        }
+        #loginForm {
+            display: block;
+        }
+        input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        button{
+            background-color: chocolate;
+            border: none;
+            padding: 15px;
+            width: 50%;
+            border-radius: 10px;
+            color: burlywood;
+            font-size: 15px;
+            margin: 5px;
+        }
+        button:hover{
+            background-color: rgb(124, 79, 47);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form id="loginForm">
+        <h1>Login</h1>
+        <p>Digite os seus dados cadastrados no campo abaixo.</p>
+        <input type="email" id="email" placeholder="Digite seu e-mail" autofocus="true" required />
+        <br><br>
+        <input type="password" id="senha" placeholder="Digite sua senha" required />
+        <br><br>
+        <button type="submit">Login</button>
+        <button type="button" id="showCadastro">Cadastrar</button>
+        <a href="index.html">
+            <button type="button">Voltar</button>
+        </a>
+    </form>
+
+    <form id="cadastroForm">
+        <h1>Cadastro</h1>
+        <p>Preencha os campos abaixo para se cadastrar.</p>
+        <input type="text" id="nomeCadastro" placeholder="Digite seu nome" required />
+        <br><br>
+        <input type="email" id="emailCadastro" placeholder="Digite seu e-mail" required />
+        <br><br>
+        <input type="password" id="senhaCadastro" placeholder="Digite sua senha" required />
+        <br><br>
+        <input type="password" id="repitaSenhaCadastro" placeholder="Repita sua senha" required />
+        <br><br>
+        <button type="submit">Cadastrar</button>
+        <button type="button" id="showLogin">Voltar</button>
+    </form>
+
+    <script>
+        document.getElementById('showCadastro').addEventListener('click', function() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('cadastroForm').style.display = 'block';
+        });
+
+        document.getElementById('showLogin').addEventListener('click', function() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('cadastroForm').style.display = 'none';
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            // Recupera os dados de cadastro do localStorage
+            const storedEmail = localStorage.getItem('email');
+            const storedSenha = localStorage.getItem('senha');
+
+            // Verifica se o email e senha são válidos
+            if (email === storedEmail && senha === storedSenha) {
+                alert("Login bem-sucedido!");
+                window.location.href = "salgado.html"; // Redireciona para a página salgado.html
+            } else {
+                alert("Email ou senha incorretos.");
+            }
+        });
+
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nomeCadastro').value;
+            const email = document.getElementById('emailCadastro').value;
+            const senha = document.getElementById('senhaCadastro').value;
+            const repitaSenha = document.getElementById('repitaSenhaCadastro').value;
+
+            // Verifica se as senhas coincidem
+            if (senha !== repitaSenha) {
+                alert("As senhas não coincidem. Por favor, tente novamente.");
+                return;
+            }
+
+            // Salva os dados de cadastro no localStorage
+            localStorage.setItem('nome', nome);
+            localStorage.setItem('email', email);
+            localStorage.setItem('senha', senha);
+
+            alert("Cadastro realizado com sucesso!");
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('cadastroForm').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

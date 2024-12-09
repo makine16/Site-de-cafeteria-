@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reabastercer os Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="Login.html">
+        <button class="logincadastro">Login / Cadastro</button>
+        </a>
+        <div class="header-design">
+        <h1>Quero café.</h1>
+        <img class="logo" src="/icon/logo 2.png" alt="logo"/>
+        </div>
+    </header>
+    
+
+    <nav class="botão">
+        <a href="index.html">
+        <button>Bebidas Quentes</button>
+        </a>
+        <a href="bf.html">
+        <button>Bebidas Frias</button>
+        </a>
+        <a href="doce.html">
+        <button>Comidas Doces</button>
+        </a>
+        <a href="salgado.html">
+        <button>Comidas Salgadas</button>
+        </a>
+        <a href="solicitap.html">
+            <button>Reabastercer os Produtos</button>
+        </a>
+    </nav>
+<form class="solicitar-produto">   
+        <fieldset class="solicitar">
+          <legend>Solicitar Produtos - Quero café</legend>
+      
+          <label for="produto">Nome do Produto:</label>
+          <input type="text" id="produto" name="produto" placeholder="Ex: Café em grãos" required>
+          
+          <label for="categoria">Categoria:</label>
+          <select id="categoria" name="categoria">
+              <option value="bebidas">Recipientes</option>
+              <option value="ingredientes">Ingredientes</option>
+              <option value="utensilios">Utensílios</option>
+          </select>
+          
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" id="quantidade" name="quantidade" min="1" placeholder="Ex: 10" required>
+          
+          <label for="unidade">Unidade de Medida:</label>
+          <input type="text" id="unidade" name="unidade" placeholder="Ex: Kg, Litros, Pacotes" required>
+          
+          <label for="recebido">Data de Recebimento:</label>
+          <input type="date" id="recebido" name="recebido" required>
+          
+          <label for="fornecedor">Fornecedor:</label>
+          <input type="text" id="fornecedor" name="fornecedor" placeholder="Nome do fornecedor" required>
+      
+          <label for="preco">Preço Unitário:</label>
+          <input type="number" id="preco" name="preco" step="0.01" placeholder="Ex: 15.50" required>
+          
+          <label for="validade">Data de Validade:</label>
+          <input type="date" id="validade" name="validade">
+      
+          <button type="submit">Registrar Produto</button>
+        </fieldset>  
+</form>
+<footer>
+    <h1>Redes Sociais</h1>
+    <div class="redes_socias">
+    <img src="/icon/face.png" alt=""/>
+      <img src="/icon/insta.png" alt=""/>
+    </div>
+    <h3>Rua das Estrelas, 128 Bairro Jardim dos Sabores Cidade Bela Vista, SP</h3>
+    <p>© 2024 Quero Café. Todos os direitos reservados.</p>
+    
+</footer>
+
+</body>
+</html>

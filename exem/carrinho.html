@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de compras</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><!--link para importação de seta no canto esquerdo superior-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    user-select: none;/*desativa a função de seleção de texto*/
+    box-sizing: border-box; 
+    }
+    :root {
+        --cor-primaria: #F5E1C0;
+        --cor-secundaria: rgb(78, 35, 3);
+        --cor-fundo: rgb(122, 51, 4);/*definindo variáveis para as cores*/
+    }
+    body {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: var(--cor-primaria);/*centralizando os elementos na tela*/
+    }
+    .carrinho {
+        width: 400px;
+        height: min-content;/*a altura se ajustará de acordo com o conteudo*/
+        background: var(--cor-fundo);
+        padding: 35px;/*expande o elemento*/
+    }
+    .carrinho .cabecalho-carrinho {
+        display: flex;/*alinhará botão e título na horizontal*/
+    }
+    .carrinho .cabecalho-carrinho button {
+        cursor: pointer;/*altera o cusror do mouse ao passar por cima do botao "voltar"*/
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+        line-height: 50%;
+        color: var(--cor-primaria);
+        background: #ddddde50;
+        border: 2px solid #800026;
+        border-radius: 8px;/*arredonda a borda do botao "voltar"*/
+        transition: .4s;
+    }
+    .carrinho .cabecalho-carrinho button:hover {
+        color: #fff;
+        background: var(--cor-primaria);
+        background-color: var(--cor-primaria);
+    }
+    .carrinho .cabecalho-carrinho h3 {
+        margin: auto;
+        text-align: center;
+        font: 400 1.25rem 'Arial';
+    }
+
+    #carrinho-itens .imagem img {
+    width: 5rem;
+    height: 5rem; 
+    object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
+    border-radius: 0.3125rem; 
+}
+
+.botoesCarrinho button{
+    cursor: pointer;
+    background-color: #4B2E2A;
+    font-family: Arial;
+    color: #FFD700;
+}
+
+h3{
+    background:#4B2E2A;
+    color: #FFD700; 
+}
+
+/* Remove a borda dos botões "+" e "-" e ajusta o estilo */
+.carrinho-item .quantidade button {
+    border: none;
+    background: none;
+    font-size: 1rem; /* Ajuste o tamanho da fonte, se desejar */
+    cursor: pointer;
+    color: #FFD700; /* Cor do texto dos botões */
+}
+
+/* Define a cor do número da quantidade de itens */
+.carrinho-item .quantidade span {
+    color: #FFD700;
+    font-weight: bold; /* Adiciona um destaque ao número, opcional */
+}
+
+/* Define a cor do texto para todos os itens do carrinho */
+.carrinho-item h4,
+.carrinho-item p,
+.carrinho-item .quantidade button,
+.carrinho-item .quantidade span {
+    color: #FFD700;
+}
+
+.soma-total{
+    color: #FFD700;
+}
+    </style>
+</head>
+<body>
+    <div id="notificacao" class="notificacao"></div>
+    <div class="carrinho">
+        <div class="cabecalho-carrinho">
+            <a href="index.html">
+                <button>
+                    <i class="bx bx-chevron-left"></i>
+                </button>
+            </a>
+            <h3>Meu carrinho</h3>
+        </div>
+        <ul id="carrinho-itens">
+            <!-- Os itens do carrinho serão adicionados dinamicamente aqui -->
+        </ul>
+        <div id="soma-total" class="soma-total">
+            <!--Soma dos produtos-->
+        </div>
+        <div class="botoesCarrinho">
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+        <button onclick="limparCarrinho()">Limpar Carrinho</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

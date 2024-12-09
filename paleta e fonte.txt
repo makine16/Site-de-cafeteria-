@@ -1,0 +1,11 @@
+Paleta de cores
+Marrom Café: #4B2E2A
+Creme Suave: #F5E1C0
+Bege Claro: #D9C7B6
+Branco: #FFFFFF
+Marrom Escuro: #2C1B18
+Dourado: #FFD700
+
+fontes
+- Pacifico
+- IBM Plex Mono
